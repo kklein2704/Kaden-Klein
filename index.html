@@ -12,10 +12,55 @@
             padding: 0;
             background-color: #f4f7f6;
             color: #333;
+        }
+
+        /* --- Global Navigation Bar Styles --- */
+        .navbar {
+            background-color: #c8102e; /* Iowa State Cardinal Red */
+            position: sticky;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 60px;
+        }
+        .nav-brand {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            gap: 25px;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover {
+            color: #F1BE48; /* Iowa State Gold */
+        }
+
+        /* --- Page Layout Styles --- */
+        .page-content {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: calc(100vh - 60px);
         }
         .container {
             max-width: 650px;
@@ -27,7 +72,7 @@
             margin: 20px;
         }
         h1 {
-            color: #c8102e; /* Iowa State Cardinal Red */
+            color: #c8102e;
             margin-bottom: 10px;
         }
         p.intro {
@@ -37,7 +82,7 @@
         }
         .btn {
             display: inline-block;
-            background-color: #F1BE48; /* Iowa State Gold */
+            background-color: #F1BE48;
             color: #000;
             padding: 12px 24px;
             text-decoration: none;
@@ -49,18 +94,22 @@
             background-color: #d9a738;
         }
     </style>
+
+    <script src="nav.js" defer></script>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Welcome</h1>
-        <p class="intro">
-            Hello! My name is Kaden Klein. I am a senior at Iowa State University studying Marketing. 
-            This is my interactive portfolio showcasing my skills and goals. I hope you enjoy and 
-            please feel free to reach out to me!
-        </p>
-        <a href="mailto:your-email@iastate.edu" class="btn">Get in Touch</a>
-    </div>
+    <main class="page-content">
+        <div class="container">
+            <h1>Welcome</h1>
+            <p class="intro">
+                Hello! My name is Kaden Klein. I am a senior at Iowa State University studying Marketing. 
+                This is my interactive portfolio showcasing my skills and goals. I hope you enjoy and 
+                please feel free to reach out to me!
+            </p>
+            <a href="mailto:your-email@iastate.edu" class="btn">Get in Touch</a>
+        </div>
+    </main>
 
 </body>
 </html>
