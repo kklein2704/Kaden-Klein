@@ -38,22 +38,25 @@ header, footer, aside, main, .hero-image, .info-graphics {
   border-bottom: 3px solid var(--border-color);
 }
 
+/* Styling for the logo container */
 .logo-area {
   width: 25%;
   border-right: 3px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 15px;
   background-color: #ffffff;
 }
 
-.logo-area h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  color: var(--isu-cardinal);
+/* Constrain image size to fit neatly inside header height */
+.site-logo {
+  max-width: 100%;
+  max-height: 100px; /* Adjust height to your preferred fit */
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
-
 .header-right {
   width: 75%;
   display: flex;
