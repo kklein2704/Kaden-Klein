@@ -1,115 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaden Klein | Interactive Portfolio</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
-        }
-
-        /* --- Global Navigation Bar Styles --- */
-        .navbar {
-            background-color: #c8102e; /* Iowa State Cardinal Red */
-            position: sticky;
-            top: 0;
-            width: 100%;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            z-index: 1000;
-        }
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            height: 60px;
-        }
-        .nav-brand {
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-            gap: 25px;
-        }
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-        .nav-links a:hover {
-            color: #F1BE48; /* Iowa State Gold */
-        }
-
-        /* --- Page Layout Styles --- */
-        .page-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 60px);
-        }
-        .container {
-            max-width: 650px;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            text-align: center;
-            margin: 20px;
-        }
-        h1 {
-            color: #c8102e;
-            margin-bottom: 10px;
-        }
-        p.intro {
-            font-size: 1.15rem;
-            color: #4a4a4a;
-            margin-bottom: 30px;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #F1BE48;
-            color: #000;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background-color 0.2s ease;
-        }
-        .btn:hover {
-            background-color: #d9a738;
-        }
-    </style>
-
-    <script src="nav.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iowa State Style Site</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <main class="page-content">
-        <div class="container">
-            <h1>Welcome</h1>
-            <p class="intro">
-                Hello! My name is Kaden Klein. I am a senior at Iowa State University studying Marketing. 
-                This is my interactive portfolio showcasing my skills and goals. I hope you enjoy and 
-                please feel free to reach out to me!
-            </p>
-            <a href="mailto:your-email@iastate.edu" class="btn">Get in Touch</a>
-        </div>
-    </main>
+  <!-- Main Website Wrapper (Centered with 10% margins) -->
+  <div class="site-container">
 
+    <!-- Header Section -->
+    <header class="site-header">
+      <div class="logo-area">
+        <h1>Logo</h1>
+      </div>
+      <div class="header-right">
+        <div class="info-graphics">
+          <p>Informational graphics / banner describing site purpose</p>
+        </div>
+        <!-- Top Nav placeholder injected by JavaScript -->
+        <div id="top-nav-container"></div>
+      </div>
+    </header>
+
+    <!-- Main Content Grid Area -->
+    <div class="main-layout">
+      
+      <!-- Left Navigation Placeholder (Injected by JS) -->
+      <aside class="sidebar-nav" id="sidebar-nav-container"></aside>
+
+      <!-- Center Main Content -->
+      <main class="main-content">
+        <div class="hero-image">
+          <h2>Hero image at top</h2>
+        </div>
+        
+        <article class="content-body">
+          <h2>Main content area</h2>
+          <p>
+            This area contains HTML text and images. Iowa State University (ISU) is a public land-grant research university in Ames, Iowa. It is the largest university in the state of Iowa and one of the nation's premier research institutions.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+          </p>
+        </article>
+      </main>
+
+      <!-- Right Sticky Sidebar -->
+      <aside class="sticky-sidebar">
+        <h3>Sticky content</h3>
+        <ul>
+          <li>News items</li>
+          <li>Adverts</li>
+          <li>Offers</li>
+          <li>General site info</li>
+          <li>Social Networking icons</li>
+        </ul>
+      </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Iowa State University. All rights reserved. | <a href="#">Primary Links</a> | <a href="#">Contact</a> | <a href="#">Privacy Statement</a> | <a href="#">Webmaster Email</a></p>
+    </footer>
+
+  </div>
+
+  <!-- Include Nav Script -->
+  <script src="nav.js"></script>
 </body>
 </html>
