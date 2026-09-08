@@ -1,0 +1,201 @@
+/* Color Palette Variables */
+:root {
+  --isu-cardinal: #C8102E;      /* Primary Red */
+  --isu-gold: #F1BE48;          /* Accent Gold */
+  --bg-color: #f8f9fa;          /* Soft neutral readable background */
+  --card-bg: #ffffff;           /* Container white */
+  --border-color: #222222;       /* Crisp wireframe-style borders */
+  --text-color: #2b2b2b;
+}
+
+/* Page Setup: 10% Margin from all edges */
+body {
+  margin: 0;
+  padding: 10% 10%; /* 10% padding from left, right, top, and bottom edges */
+  background-color: var(--bg-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+/* Outer Grid / Main Wireframe Box */
+.site-container {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--border-color);
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Base Border Formatting for Layout Components */
+header, footer, aside, main, .hero-image, .info-graphics {
+  box-sizing: border-box;
+}
+
+/* Top Header Layout */
+.site-header {
+  display: flex;
+  border-bottom: 3px solid var(--border-color);
+}
+
+.logo-area {
+  width: 25%;
+  border-right: 3px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.logo-area h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: var(--isu-cardinal);
+}
+
+.header-right {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-graphics {
+  padding: 20px;
+  border-bottom: 2px solid var(--border-color);
+  background-color: #f1f3f5;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--isu-cardinal);
+}
+
+/* Horizontal Top Navigation */
+.top-nav {
+  background-color: var(--isu-cardinal);
+}
+
+.top-nav ul {
+  display: flex;
+}
+
+.top-nav li {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.top-nav a {
+  padding: 10px 15px;
+  color: white;
+}
+
+.top-nav a:hover {
+  background-color: var(--isu-gold);
+  color: #000;
+}
+
+.top-nav .secondary-nav {
+  background-color: #a00c24;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Middle Layout Structure (3-Column layout) */
+.main-layout {
+  display: flex;
+  min-height: 500px;
+}
+
+/* Left Sidebar Nav */
+.sidebar-nav {
+  width: 25%;
+  border-right: 3px solid var(--border-color);
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.sidebar-nav ul {
+  margin-bottom: 20px;
+}
+
+.sidebar-nav li {
+  margin-bottom: 10px;
+}
+
+.sidebar-nav .nav-title {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: var(--isu-cardinal);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Main Content Area (Center) */
+.main-content {
+  width: 55%;
+  border-right: 3px solid var(--border-color);
+  padding: 20px;
+}
+
+.hero-image {
+  border: 2px solid var(--border-color);
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #eaeaea;
+}
+
+.content-body h2 {
+  margin-top: 0;
+  color: var(--isu-cardinal);
+}
+
+/* Right Sidebar (Sticky Content) */
+.sticky-sidebar {
+  width: 20%;
+  padding: 20px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  background-color: #fafafa;
+}
+
+.sticky-sidebar ul {
+  padding-left: 20px;
+}
+
+.sticky-sidebar li {
+  margin-bottom: 8px;
+}
+
+/* Footer Section */
+.site-footer {
+  border-top: 3px solid var(--border-color);
+  padding: 15px;
+  text-align: center;
+  font-size: 0.85rem;
+  background-color: #e9ecef;
+}
+
+.site-footer a {
+  color: var(--isu-cardinal);
+}
