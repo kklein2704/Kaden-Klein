@@ -3,14 +3,10 @@ const navConfig = {
   primary: [
     { name: "Home", link: "index.html" },
     { name: "About Me", link: "#about" },
-    { name: "Portfolio", link: "#academics" },
-    { name: "Contact", link: "#research" }
+    { name: "Portfolio", link: "#portfolio" },
+    { name: "Contact", link: "#contact" }
   ],
-  secondary: [
-    { name: "Admissions", link: "#admissions" },
-    { name: "Campus Life", link: "#campus" },
-    { name: "News & Events", link: "#news" }
-  ]
+  secondary: [] // Empty if you don't need secondary links
 };
 
 // Function to render Top Header Navigation
@@ -23,9 +19,11 @@ function renderTopNav() {
       <ul>
         ${navConfig.primary.map(item => `<li><a href="${item.link}">${item.name}</a></li>`).join("")}
       </ul>
-      <ul class="secondary-nav">
-        ${navConfig.secondary.map(item => `<li><a href="${item.link}">${item.name}</a></li>`).join("")}
-      </ul>
+      ${navConfig.secondary.length > 0 ? `
+        <ul class="secondary-nav">
+          ${navConfig.secondary.map(item => `<li><a href="${item.link}">${item.name}</a></li>`).join("")}
+        </ul>
+      ` : ''}
     </nav>
   `;
   
@@ -39,14 +37,9 @@ function renderSidebarNav() {
 
   const sidebarNavHTML = `
     <nav>
-      <div class="nav-title">Primary Navigation</div>
+      <div class="nav-title">Menu</div>
       <ul>
         ${navConfig.primary.map(item => `<li><a href="${item.link}">${item.name}</a></li>`).join("")}
-      </ul>
-      
-      <div class="nav-title">Secondary Navigation</div>
-      <ul>
-        ${navConfig.secondary.map(item => `<li><a href="${item.link}">${item.name}</a></li>`).join("")}
       </ul>
     </nav>
   `;
@@ -54,12 +47,11 @@ function renderSidebarNav() {
   container.innerHTML = sidebarNavHTML;
 }
 
-// Automatically populate links and update dynamic items on load
+// Automatically populate links on load
 document.addEventListener("DOMContentLoaded", () => {
   renderTopNav();
   renderSidebarNav();
 
-  // Set current dynamic year in footer
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
