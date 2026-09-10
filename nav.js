@@ -1,15 +1,13 @@
-// Navigation configuration data
 const navConfig = {
   primary: [
     { name: "Home", link: "index.html" },
-    { name: "About Me", link: "#about" },
-    { name: "Portfolio", link: "#portfolio" },
-    { name: "Contact", link: "#contact" }
+    { name: "About Me", link: "about.html" },
+    { name: "Portfolio", link: "portfolio.html" },
+    { name: "Contact", link: "contact.html" }
   ],
-  secondary: [] // Empty if you don't need secondary links
+  secondary: []
 };
 
-// Function to render Top Header Navigation
 function renderTopNav() {
   const container = document.getElementById("top-nav-container");
   if (!container) return;
@@ -19,18 +17,12 @@ function renderTopNav() {
       <ul>
         ${navConfig.primary.map(item => `<li><a href="${item.link}">${item.name}</a></li>`).join("")}
       </ul>
-      ${navConfig.secondary.length > 0 ? `
-        <ul class="secondary-nav">
-          ${navConfig.secondary.map(item => `<li><a href="${item.link}">${item.name}</a></li>`).join("")}
-        </ul>
-      ` : ''}
     </nav>
   `;
   
   container.innerHTML = topNavHTML;
 }
 
-// Function to render Left Sidebar Navigation
 function renderSidebarNav() {
   const container = document.getElementById("sidebar-nav-container");
   if (!container) return;
@@ -47,7 +39,6 @@ function renderSidebarNav() {
   container.innerHTML = sidebarNavHTML;
 }
 
-// Automatically populate links on load
 document.addEventListener("DOMContentLoaded", () => {
   renderTopNav();
   renderSidebarNav();
