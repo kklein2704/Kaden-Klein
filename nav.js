@@ -2,9 +2,9 @@
 const navConfig = {
   primary: [
     { name: "Home", link: "index.html" },
-    { name: "About", link: "#about" },
-    { name: "Academics", link: "#academics" },
-    { name: "Research", link: "#research" }
+    { name: "About Me", link: "#about" },
+    { name: "Portfolio", link: "#academics" },
+    { name: "Contact", link: "#research" }
   ],
   secondary: [
     { name: "Admissions", link: "#admissions" },
