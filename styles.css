@@ -11,14 +11,14 @@
 /* Page Setup: 10% Margin from all edges */
 body {
   margin: 0;
-  padding: 10% 10%; /* 10% padding from left, right, top, and bottom edges */
+  padding: 10% 10%;
   background-color: var(--bg-color);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-color);
   box-sizing: border-box;
 }
 
-/* Outer Grid / Main Wireframe Box */
+/* Main Container Grid */
 .site-container {
   display: flex;
   flex-direction: column;
@@ -27,7 +27,6 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Base Border Formatting for Layout Components */
 header, footer, aside, main, .hero-image, .info-graphics {
   box-sizing: border-box;
 }
@@ -38,7 +37,6 @@ header, footer, aside, main, .hero-image, .info-graphics {
   border-bottom: 3px solid var(--border-color);
 }
 
-/* Styling for the logo container */
 .logo-area {
   width: 25%;
   border-right: 3px solid var(--border-color);
@@ -49,14 +47,14 @@ header, footer, aside, main, .hero-image, .info-graphics {
   background-color: #ffffff;
 }
 
-/* Constrain image size to fit neatly inside header height */
 .site-logo {
   max-width: 100%;
-  max-height: 100px; /* Adjust height to your preferred fit */
+  max-height: 100px;
   height: auto;
   display: block;
   object-fit: contain;
 }
+
 .header-right {
   width: 75%;
   display: flex;
@@ -68,7 +66,7 @@ header, footer, aside, main, .hero-image, .info-graphics {
   border-bottom: 2px solid var(--border-color);
   background-color: #f1f3f5;
   text-align: center;
-  font-style: italic;
+  font-weight: 500;
 }
 
 /* Navigation Styles */
@@ -89,7 +87,7 @@ nav a:hover {
   color: var(--isu-cardinal);
 }
 
-/* Horizontal Top Navigation */
+/* Top Navigation Bar */
 .top-nav {
   background-color: var(--isu-cardinal);
 }
@@ -105,7 +103,7 @@ nav a:hover {
 }
 
 .top-nav a {
-  padding: 10px 15px;
+  padding: 12px 15px;
   color: white;
 }
 
@@ -114,12 +112,7 @@ nav a:hover {
   color: #000;
 }
 
-.top-nav .secondary-nav {
-  background-color: #a00c24;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Middle Layout Structure (3-Column layout) */
+/* Middle Layout Structure */
 .main-layout {
   display: flex;
   min-height: 500px;
@@ -133,24 +126,19 @@ nav a:hover {
   background-color: #fafafa;
 }
 
-.sidebar-nav ul {
-  margin-bottom: 20px;
-}
-
 .sidebar-nav li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .sidebar-nav .nav-title {
   font-weight: bold;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: var(--isu-cardinal);
   text-transform: uppercase;
   font-size: 0.85rem;
 }
 
-/* Main Content Area (Center) */
+/* Main Content Area */
 .main-content {
   width: 55%;
   border-right: 3px solid var(--border-color);
@@ -172,7 +160,12 @@ nav a:hover {
   color: var(--isu-cardinal);
 }
 
-/* Right Sidebar (Sticky Content) */
+.content-body p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Sticky Sidebar Right */
 .sticky-sidebar {
   width: 20%;
   padding: 20px;
