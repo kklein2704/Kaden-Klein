@@ -1,13 +1,14 @@
+// Navigation configuration data
 const navConfig = {
   primary: [
     { name: "Home", link: "index.html" },
     { name: "About Me", link: "about.html" },
     { name: "Portfolio", link: "portfolio.html" },
     { name: "Contact", link: "contact.html" }
-  ],
-  secondary: []
+  ]
 };
 
+// Function to render Top Header Navigation
 function renderTopNav() {
   const container = document.getElementById("top-nav-container");
   if (!container) return;
@@ -23,6 +24,7 @@ function renderTopNav() {
   container.innerHTML = topNavHTML;
 }
 
+// Function to render Left Sidebar Navigation
 function renderSidebarNav() {
   const container = document.getElementById("sidebar-nav-container");
   if (!container) return;
@@ -39,6 +41,7 @@ function renderSidebarNav() {
   container.innerHTML = sidebarNavHTML;
 }
 
+// Automatically populate links on load
 document.addEventListener("DOMContentLoaded", () => {
   renderTopNav();
   renderSidebarNav();
