@@ -161,6 +161,51 @@ nav a:hover {
   background-color: #eaeaea;
 }
 
+/* About Page Column Grid */
+.about-grid {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.about-image-col {
+  flex: 0 0 260px;
+}
+
+.about-text-col {
+  flex: 1;
+}
+
+/* Profile Photo Styling */
+.profile-photo-left {
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  display: block;
+}
+
+/* General Content Styling */
+.content-body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content-body h2 {
+  margin-top: 20px;
+  color: var(--isu-cardinal);
+}
+
+.content-body h2:first-of-type {
+  margin-top: 0;
+}
+
+.content-body p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
 /* Portfolio Page Spacing & Cards */
 .portfolio-body .portfolio-section {
   margin-bottom: 40px;
@@ -196,36 +241,6 @@ nav a:hover {
   border-radius: 4px;
 }
 
-/* Floating Portrait Image & Text Wrapping */
-.profile-photo-left {
-  float: left;
-  max-width: 280px;
-  height: auto;
-  margin: 0 25px 15px 0;
-  border: 2px solid var(--border-color);
-  border-radius: 4px;
-}
-
-.content-body::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.content-body h2 {
-  margin-top: 20px;
-  color: var(--isu-cardinal);
-}
-
-.content-body h2:first-of-type {
-  margin-top: 0;
-}
-
-.content-body p {
-  line-height: 1.6;
-  font-size: 1.05rem;
-}
-
 /* Sticky Sidebar Right */
 .sticky-sidebar {
   width: 20%;
@@ -244,18 +259,6 @@ nav a:hover {
   margin-bottom: 8px;
 }
 
-/* Footer Section */
-.site-footer {
-  border-top: 3px solid var(--border-color);
-  padding: 15px;
-  text-align: center;
-  font-size: 0.85rem;
-  background-color: #e9ecef;
-}
-
-.site-footer a {
-  color: var(--isu-cardinal);
-}
 /* Contact Page Card & Buttons */
 .contact-card {
   background-color: #fafafa;
@@ -307,4 +310,17 @@ nav a:hover {
 .resume-button:hover {
   background-color: var(--isu-gold);
   color: #000000;
+}
+
+/* Footer Section */
+.site-footer {
+  border-top: 3px solid var(--border-color);
+  padding: 15px;
+  text-align: center;
+  font-size: 0.85rem;
+  background-color: #e9ecef;
+}
+
+.site-footer a {
+  color: var(--isu-cardinal);
 }
